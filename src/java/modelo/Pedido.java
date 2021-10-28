@@ -11,24 +11,35 @@ import java.util.ArrayList;
  *
  * @author anticuchito
  */
-public class pedido {
-  private String NombreCliente;
-  private String ApellidoCliente;
-  private String DireccionPedido;
-  private int cantidadPedido;
-  private int pesoPedido;
-  private ArrayList<Producto> listaProductos;
+public class Pedido {
 
-    public pedido() {
+    private String NombreCliente;
+    private String ApellidoCliente;
+    private String DireccionPedido;
+    private int cantidadPedido;
+    private int pesoPedido;
+    private ArrayList<Producto> listaProductos;
+    private Usuario usuario;
+
+    public Pedido() {
     }
 
-    public pedido(String NombreCliente, String ApellidoCliente, String DireccionPedido, int cantidadPedido, int pesoPedido, ArrayList<Producto> listaProductos) {
+    public Pedido(String NombreCliente, String ApellidoCliente, String DireccionPedido, int cantidadPedido, int pesoPedido, ArrayList<Producto> listaProductos, Usuario usuario) {
         this.NombreCliente = NombreCliente;
         this.ApellidoCliente = ApellidoCliente;
         this.DireccionPedido = DireccionPedido;
         this.cantidadPedido = cantidadPedido;
         this.pesoPedido = pesoPedido;
         this.listaProductos = listaProductos;
+        this.usuario = usuario;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 
     public String getNombreCliente() {
@@ -79,5 +90,4 @@ public class pedido {
         this.listaProductos = listaProductos;
     }
 
-    
 }

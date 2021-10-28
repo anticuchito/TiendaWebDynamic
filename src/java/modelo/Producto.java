@@ -10,15 +10,15 @@ package modelo;
  * @author anticuchito
  */
 public class Producto {
-   String nombreProducto;
-   String DescProducto;
-   String imgProducto;
-   int PrecioProducto;
-   float PrecioIva;
-   int Largo; 
-   int Ancho;
-   int Alto ;
-   float Peso ;
+   private String nombreProducto;
+   private  String DescProducto;
+   private  String imgProducto;
+   private  int PrecioProducto;
+   private  float PrecioIva;
+   private  int Largo; 
+   private  int Ancho;
+   private  int Alto ;
+   private  float Peso ;
 
     public Producto() {
     }
