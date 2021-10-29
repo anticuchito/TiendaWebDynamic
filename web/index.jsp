@@ -4,6 +4,8 @@
     Author     : anticuchito
 --%>
 
+<%@page import="modelo.Usuario"%>
+<%@page import="modelo.Pedido"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="modelo.Producto"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -17,7 +19,7 @@
     </head>
     <%
         ArrayList<Producto> listProduct = new ArrayList();
-        
+        Usuario usuario = new Usuario("miguel","rivero","calle generica 1234","Arica y parinacota","Arica");
         Producto prod1 = new Producto();
         prod1.setNombreProducto("manzana");
         prod1.setDescProducto("this is a apple");
@@ -63,6 +65,14 @@
         prod5.setAlto(200);
         prod5.setPeso(1);
         listProduct.add(prod5);
+                             
+        Pedido pedido = new Pedido();
+        pedido.setCodPedido(122435);
+        pedido.setCantidadPedido(20);
+        pedido.setPesoPedido(10);
+        pedido.setListaProductos(listProduct);
+        pedido.setUsuario(usuario);
+        System.out.println(pedido.getUsuario().getNombreUsuario());
         
     %>
         

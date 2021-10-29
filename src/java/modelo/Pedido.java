@@ -12,10 +12,7 @@ import java.util.ArrayList;
  * @author anticuchito
  */
 public class Pedido {
-
-    private String NombreCliente;
-    private String ApellidoCliente;
-    private String DireccionPedido;
+    private int codPedido;
     private int cantidadPedido;
     private int pesoPedido;
     private ArrayList<Producto> listaProductos;
@@ -24,15 +21,15 @@ public class Pedido {
     public Pedido() {
     }
 
-    public Pedido(String NombreCliente, String ApellidoCliente, String DireccionPedido, int cantidadPedido, int pesoPedido, ArrayList<Producto> listaProductos, Usuario usuario) {
-        this.NombreCliente = NombreCliente;
-        this.ApellidoCliente = ApellidoCliente;
-        this.DireccionPedido = DireccionPedido;
+    public Pedido(int codPedido, int cantidadPedido, int pesoPedido, ArrayList<Producto> listaProductos, Usuario usuario) {
+        this.codPedido = codPedido;
         this.cantidadPedido = cantidadPedido;
         this.pesoPedido = pesoPedido;
         this.listaProductos = listaProductos;
         this.usuario = usuario;
     }
+
+   
 
     public Usuario getUsuario() {
         return usuario;
@@ -42,29 +39,14 @@ public class Pedido {
         this.usuario = usuario;
     }
 
-    public String getNombreCliente() {
-        return NombreCliente;
+    public int getCodPedido() {
+        return codPedido;
     }
 
-    public void setNombreCliente(String NombreCliente) {
-        this.NombreCliente = NombreCliente;
+    public void setCodPedido(int codPedido) {
+        this.codPedido = codPedido;
     }
 
-    public String getApellidoCliente() {
-        return ApellidoCliente;
-    }
-
-    public void setApellidoCliente(String ApellidoCliente) {
-        this.ApellidoCliente = ApellidoCliente;
-    }
-
-    public String getDireccionPedido() {
-        return DireccionPedido;
-    }
-
-    public void setDireccionPedido(String DireccionPedido) {
-        this.DireccionPedido = DireccionPedido;
-    }
 
     public int getCantidadPedido() {
         return cantidadPedido;
